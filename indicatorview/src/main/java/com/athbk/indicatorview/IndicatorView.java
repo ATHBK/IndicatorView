@@ -94,7 +94,10 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
         if (type == StyleIndicator.SHAPE){
             d = DEFAULT_WIDTH_SHAPE;
         }
-        int firstX = haftWidth - (count/2 - 1) * d - (count/2)*(DEFAULT_DISTANCE) - d/2;
+        int firstX = haftWidth - (count / 2) * d - (count / 2) * (DEFAULT_DISTANCE) - d / 2;
+        if (count % 2 == 0) {
+            firstX = haftWidth - (count / 2 - 1) * d - (count / 2) * (DEFAULT_DISTANCE) - d / 2;
+        }
         for (int i = 0; i < count; i++){
             if (type == StyleIndicator.SHAPE){
                 float lef = firstX + i*DEFAULT_DISTANCE + i * d;

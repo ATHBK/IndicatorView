@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         indicator = (IndicatorView)findViewById(R.id.indicator);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(6);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(3);
         viewPager.setAdapter(adapter);
-        indicator.setType(StyleIndicator.SHAPE);
+        indicator.setType(StyleIndicator.CIRCLE_STYLE_1);
         indicator.setViewPager(viewPager);
     }
 }
