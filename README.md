@@ -2,8 +2,8 @@
 Indicator ViewPager is a library that allows you to create a indicator of viewpager with 3 style.
 
   ![demo](ScreenShots/2017-03-21-09-19-02.jpg)
-  ![demo](https://image.ibb.co/m75uRF/device_2017_03_10_163900.png)
-  ![demo](https://image.ibb.co/ct4A0a/device_2017_03_10_163835.png)
+  ![demo](ScreenShots/2017-03-21-09-18-36.jpg)
+  ![demo](ScreenShots/2017-03-21-09-19-34.jpg)
 ---
 
 # Table of Contents
