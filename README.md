@@ -66,7 +66,7 @@ To use this IndicatorView in your layout simply copy and paste the xml below. Th
 ```
 #### Indicator Attr 
 
-There are several other attributes that can be used to configure the button's behaviour and appearance. They are shown below and will be explained in the sections that follow long with their java counterparts.
+There are several other attributes that can be used to configure color selected and unselected of indicator.
 
 ```xml
  	....
@@ -79,9 +79,9 @@ There are several other attributes that can be used to configure the button's be
 
 #### Java
 
-If you would like to set the icon via Java then simply call the set icon method on the button. 
+How to use in . 
 
-```java
+```java	
 	ViewPagerAdapter adapter = new ViewPagerAdapter(6);
         viewPager.setAdapter(adapter);
         indicator.setType(StyleIndicator.CIRCLE_STYLE_2);
