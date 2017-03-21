@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 
 public class ViewPagerAdapter extends PagerAdapter {
 
-    private String[] colors = {"#FFFF00", "#FF0000", "#008000", "#0000FF"};
+    private String[] colors = {"#354361", "#FF0000", "#008000", "#000000"};
     private int count = 5;
 
     public ViewPagerAdapter(int count) {

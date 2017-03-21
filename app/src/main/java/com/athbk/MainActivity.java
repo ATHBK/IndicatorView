@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         indicator = (IndicatorView)findViewById(R.id.indicator);
         ViewPagerAdapter adapter = new ViewPagerAdapter(6);
         viewPager.setAdapter(adapter);
-        indicator.setType(StyleIndicator.CIRCLE_STYLE_2);
+        indicator.setType(StyleIndicator.SHAPE);
         indicator.setViewPager(viewPager);
     }
 }
