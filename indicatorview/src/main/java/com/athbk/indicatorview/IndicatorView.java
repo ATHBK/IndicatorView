@@ -45,6 +45,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
         use height with shape
      */
     private int height = DEFAULT_RADIUS_SELECTED;
+    private int width = DEFAULT_WIDTH_SHAPE;
 
     private int currentPosition = 0;
     private int beforePosition = 0;
@@ -54,18 +55,23 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
 
     private ViewPager viewPager;
 
+    private Context context;
+
     public IndicatorView(Context context) {
         super(context);
+        this.context = context;
     }
 
     public IndicatorView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0);
+        this.context = context;
     }
 
     public IndicatorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
+        this.context = context;
     }
 
     @Override
@@ -92,7 +98,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
         int y = getHeight()/2;
         int d = radius*2;
         if (type == StyleIndicator.SHAPE){
-            d = DEFAULT_WIDTH_SHAPE;
+            d = width;
         }
         int firstX = haftWidth - (count / 2) * d - (count / 2) * (DEFAULT_DISTANCE) - d / 2;
         if (count % 2 == 0) {
@@ -157,5 +163,23 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
     public void setType(StyleIndicator type) {
         this.type = type;
         requestLayout();
+    }
+
+    /**
+     *
+     * @param height dp
+     */
+    public void setHeightShape(int height) {
+        this.height = (int) DeviceDimensionsHelper.convertDpToPixel(height, context);
+        requestLayout();
+    }
+
+    /**
+     *
+     * @param width dp
+     */
+    public void setWidthShape(int width) {
+        this.width = (int) DeviceDimensionsHelper.convertDpToPixel(width, context);
+        invalidate();
     }
 }
