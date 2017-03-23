@@ -94,7 +94,13 @@ How to use in .
 - StyleIndicator.CIRCLE_STYLE_1
 - StyleIndicator.CIRCLE_STYLE_2
 - StyleIndicator.SHAPE
-
+*** Update v1.1.1: change size of type shape
+```java
+	indicator.setType(StyleIndicator.SHAPE);
+        indicator.setHeightShape(16);
+        indicator.setWidthShape(50);
+        indicator.setViewPager(viewPager);
+```
 ---
 # License
 
