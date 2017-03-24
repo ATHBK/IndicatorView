@@ -8,3 +8,19 @@
 *.bin
 
 *.jar
+
+app/app.iml
+
+app/app.iml
+
+app/src/main/java/com/athbk/GuideFragment.java
+
+app/src/main/java/com/athbk/ItemPagerAdapter.java
+
+app/src/main/java/com/athbk/MainActivity.java
+
+app/src/main/res/drawable/mon1.png
+
+app/src/main/java/com/athbk/MainActivity.java
+
+indicatorview/indicatorview.iml

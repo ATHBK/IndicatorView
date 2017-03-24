@@ -76,6 +76,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
 
     @Override
     protected void onDraw(Canvas canvas) {
+        if (indicators == null) return;
         for (int i=0; i<indicators.length; i++){
             indicators[i].draw(canvas);
         }
@@ -93,6 +94,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        if (viewPager == null) return;
         int haftWidth = getWidth() / 2;
         int count = viewPager.getAdapter().getCount();
         int y = getHeight()/2;
