@@ -111,7 +111,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
                 float lef = firstX + i*DEFAULT_DISTANCE + i * d;
                 float tp = getHeight()/2;
                 float rg = lef + d;
-                float btm = DEFAULT_RADIUS_SELECTED;
+                float btm = height;
                 RectF rectF = new RectF(lef, tp, rg, btm);
                 indicators[i] = indicatorFactory.setPropertyRadiusIndicator(indicators[i], rectF);
             }
