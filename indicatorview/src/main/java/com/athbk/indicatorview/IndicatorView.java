@@ -76,7 +76,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (indicators == null) return;
+        if (indicators == null || indicators.length == 0) return;
         for (int i=0; i<indicators.length; i++){
             indicators[i].draw(canvas);
         }
@@ -95,6 +95,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         if (viewPager == null) return;
+        if (indicators == null || indicators.length == 0) return;
         int haftWidth = getWidth() / 2;
         int count = viewPager.getAdapter().getCount();
         int y = getHeight()/2;
@@ -130,6 +131,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
 
     @Override
     public void onPageSelected(int position) {
+        if (indicators == null || indicators.length == 0) return;
         beforePosition = currentPosition;
         currentPosition = position;
         if (beforePosition == currentPosition) return;
@@ -156,6 +158,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
         this.viewPager = viewPager;
         viewPager.addOnPageChangeListener(this);
         int count = viewPager.getAdapter().getCount();
+        if (count == 0) return;
         indicators = new Indicator[viewPager.getAdapter().getCount()];
         for (int i = 0; i < count; i++){
             indicators[i] = indicatorFactory.getIndicatorBasic(type, radius, i == 0);
