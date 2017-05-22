@@ -163,6 +163,7 @@ public class IndicatorView extends View implements ViewPager.OnPageChangeListene
         for (int i = 0; i < count; i++){
             indicators[i] = indicatorFactory.getIndicatorBasic(type, radius, i == 0);
         }
+        // reset all data.
         beforePosition = 0;
         currentPosition = 0;
         requestLayout();
