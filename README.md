@@ -42,7 +42,7 @@ Add this to your module's `build.gradle` file:
 
 ```gradle
 dependencies {
-	compile 'com.github.ATHBK:IndicatorView:v1.1.4'
+	compile 'com.github.ATHBK:IndicatorView:v1.2.1'
 }
 ```
 
